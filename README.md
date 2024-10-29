@@ -1,21 +1,24 @@
 # Sanofi Sync React
 
-### Conversão do Site para Aplicativo Mobile com React Native
+
+### Projeto de Conversão de Site para Aplicativo Mobile com React Native
 
 ## Descrição do Projeto
-O **Sanofi Sync React** é uma aplicação móvel desenvolvida em React Native, baseada no site da Sanofi, adaptada para uma experiência mobile. O projeto inclui funcionalidades para registro de ponto, gerenciamento de cursos de treinamento, e envio de mensagens de contato, com interface intuitiva e responsiva.
+O **Sanofi Sync React** é uma aplicação móvel desenvolvida em React Native, convertendo as funcionalidades do site Sanofi para uma experiência mobile. O projeto permite registro de ponto, gerenciamento de cursos e envio de mensagens de contato, oferecendo uma interface intuitiva e responsiva.
 
 ## Tecnologias Utilizadas
 - **Frontend**: React Native, JavaScript
 - **Backend**: Node.js, Express.js
-- **Banco de Dados**: Armazenamento em memória para testes
+- **Banco de Dados**: Armazenamento em memória (para testes)
 
 ## Funcionalidades
-- **Navegação**: Navegação entre cinco telas principais: Home, Formulário de Contato, Registro de Ponto, Treinamentos e Dashboard.
-- **Registro de Ponto**: Possibilidade de registrar até 4 pontos por dia.
-- **Gerenciamento de Cursos**: Adição e conclusão de cursos de treinamento.
-- **Formulário de Contato**: Envio de mensagens com validação de campos e feedback visual.
-  
+1. **Navegação entre Telas**: Home, Formulário de Contato, Registro de Ponto, Treinamentos e Dashboard.
+2. **Registro de Ponto**: Registro de até 4 pontos por dia, com data e hora.
+3. **Gerenciamento de Cursos**: Adição e conclusão de cursos.
+4. **Formulário de Contato**: Envio de mensagens com validação e feedback visual.
+
+---
+
 ## Estrutura das Rotas da API
 | Rota               | Método | Descrição                                    |
 |--------------------|--------|----------------------------------------------|
@@ -25,6 +28,8 @@ O **Sanofi Sync React** é uma aplicação móvel desenvolvida em React Native, 
 | `/api/pontos`      | GET    | Lista todos os pontos registrados.           |
 | `/api/contato`     | POST   | Envia uma mensagem de contato.               |
 | `/api/contato`     | GET    | Lista todas as mensagens de contato.         |
+
+---
 
 ## Instruções de Instalação e Configuração
 
@@ -40,7 +45,7 @@ cd sanofi-sync-react
 ```
 
 ### Passo 2: Instalar Dependências
-Para instalar todas as dependências necessárias para o frontend e o backend:
+Instale todas as dependências necessárias para o backend e frontend, executando o comando no diretório do projeto:
 ```bash
 npm install
 ```
@@ -57,30 +62,41 @@ Para iniciar o servidor backend:
    ```
    O backend estará disponível em `http://localhost:3000`.
 
-### Passo 4: Configurar o Frontend
-Para iniciar o app React Native:
-1. **Volte ao diretório principal** e inicie o aplicativo:
+### Passo 4: Configurar o Frontend para Web
+Se preferir rodar o frontend no navegador, você pode usar o ambiente web:
+1. **Volte ao diretório principal do projeto**:
    ```bash
    cd ../
+   ```
+2. **Inicie o aplicativo em modo web**:
+   ```bash
+   npm run web
+   ```
+   Isso iniciará o ambiente web no endereço `http://localhost:8080`. Esse modo permite verificar a interface e funcionalidades diretamente no navegador.
+
+### Passo 5: Configurar o Frontend para Mobile
+Para rodar o app no emulador ou em dispositivo mobile:
+1. **No diretório principal do projeto**, execute o comando:
+   ```bash
    npm start
    ```
-2. **Abrir o app no emulador** ou escaneie o QR code no aplicativo Expo Go.
+2. **Emulador ou dispositivo**: No Expo, escaneie o QR code com o Expo Go App ou utilize um emulador de sua escolha.
 
 ---
 
 ## Como Usar o Projeto
 
-- **Home**: A tela inicial com instruções básicas de uso.
-- **Formulário de Contato**: Permite enviar uma mensagem preenchendo nome, email e mensagem.
-- **Registro de Ponto**: Interface para registrar pontos, com limite de até 4 pontos por dia.
-- **Treinamentos**: Possibilidade de adicionar novos cursos e concluir após o treinamento.
-- **Dashboard**: Resumo dos pontos registrados e cursos concluídos.
+1. **Home**: Tela inicial com instruções básicas sobre o uso do aplicativo.
+2. **Formulário de Contato**: Permite o envio de uma mensagem preenchendo nome, email e mensagem. As mensagens são exibidas ao administrador para análise.
+3. **Registro de Ponto**: Interface que permite registrar até 4 pontos por dia, mostrando data e hora do registro.
+4. **Treinamentos**: Interface para gerenciar cursos. Usuários podem adicionar novos cursos e marcá-los como concluídos ao final do treinamento.
+5. **Dashboard**: Mostra o resumo dos pontos registrados e cursos concluídos pelo usuário.
 
 ---
 
 ## Como Acessar Cada Rota no Backend
 
-Para acessar as rotas no backend, acesse as URLs conforme os exemplos abaixo:
+Para acessar as rotas do backend, utilize as URLs e métodos conforme o exemplo:
 
 - **Listar cursos disponíveis**: `http://localhost:3000/api/courses` (GET)
 - **Adicionar novo curso**: `http://localhost:3000/api/courses` (POST)
@@ -89,7 +105,7 @@ Para acessar as rotas no backend, acesse as URLs conforme os exemplos abaixo:
 - **Enviar mensagem de contato**: `http://localhost:3000/api/contato` (POST)
 - **Listar todas as mensagens de contato**: `http://localhost:3000/api/contato` (GET)
 
-Essas rotas podem ser acessadas diretamente no navegador ou com ferramentas como o Postman.
+Essas rotas podem ser testadas diretamente no navegador ou em ferramentas como Postman.
 
 ---
 
@@ -99,7 +115,7 @@ Essas rotas podem ser acessadas diretamente no navegador ou com ferramentas como
 sanofi-sync-react/
 ├── backend/               # Código do backend (Node.js, Express)
 │   ├── server.js          # Arquivo principal do servidor
-│   ├── . . .
+│   └── . . .
 ├── assets/                # Arquivos de mídia e imagens
 ├── src/                   # Código do frontend (React Native)
 │   ├── screens/           # Telas principais do aplicativo
@@ -110,4 +126,3 @@ sanofi-sync-react/
 ├── package.json           # Dependências e scripts
 └── . . .
 ```
-

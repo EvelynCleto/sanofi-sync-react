@@ -126,3 +126,10 @@ sanofi-sync-react/
 ├── package.json           # Dependências e scripts
 └── . . .
 ```
+
+## Integrantes do Grupo
+
+- **Evelyn Cleto da Silva** - RM: 93026
+- **Eduardo Kenji Pellichero Fujie** - RM: 92869
+- **Roberto Claudio Castro dos Santos** - RM: 96162
+

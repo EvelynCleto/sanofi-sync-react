@@ -1,0 +1,1 @@
+# sanofi-sync-react
